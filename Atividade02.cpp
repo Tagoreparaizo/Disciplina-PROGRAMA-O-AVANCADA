@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
-/** 1)Escreva um programa que insere um inteiro de cinco dígitos, separa o
+/** 1) Escreva um programa que insere um inteiro de cinco dígitos, separa o
 inteiro em seus dígitos individuais e imprime os dígitos separados
 entre si por três espaços cada. [Dica: Utilize operadores de divisão de
 inteiros e módulo.] Por exemplo, se o usuário digitar 42339, o
@@ -37,10 +37,23 @@ void q2(){
     }while (numero<=10);
 }
 
-
+/** 3) Escrever programa que receba a medida de dois ângulos internos de um
+triângulo, calcule e mostre a medida do terceiro ângulo; sabendo que a
+soma dos ângulos internos de um triângulo é 180. */
+void q3(){
+    double angulo1,angulo2,angulo3;
+    std::cout << "Informe a medida dos 2 angulos separadamente:" <<std::endl;
+    std::cin >> angulo1 >> angulo2;
+    if (angulo1+angulo2 >180)
+        std::cout <<"Triangulo Inválido." <<std:: endl;
+        return;
+    angulo3 = 180 - angulo1- angulo2;
+    std::cout << "Medida do terceiro angulo:" <<angulo3<< std::endl;
+}
 
 int main(){
     q1();
     q2();
+    q3();
     return 0;
 }
