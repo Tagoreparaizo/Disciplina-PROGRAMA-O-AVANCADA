@@ -18,8 +18,29 @@ void q1(){
         std::cout << atual <<"   ";
     }
 }
+/** 2) Escreva um programa que calcula os quadrados e cubos dos inteiros
+de 0 a 10 e usa tabulações para imprimir as seguintes tabelas de
+valores */
+void q2(){
+    int quadrado, cubo , numero =0;
+    std::cout << std::left << std::setw(10) << "Numero" 
+              << std::setw(12) << "Quadrado" 
+              << "Cubo" << std::endl;
+    do{
+        quadrado = round(pow(numero,2));
+        cubo = round(pow(numero,3));
+        
+        std::cout << std::left << std::setw(10) << numero 
+                  << std::left << std::setw(12) << quadrado
+                  << cubo << std::endl;
+        numero++;
+    }while (numero<=10);
+}
+
+
 
 int main(){
     q1();
+    q2();
     return 0;
 }
