@@ -32,8 +32,22 @@ void q2(){
     }while (numero<=10);
 }
 
+/** 3) Escrever programa que receba a medida de dois ângulos internos de um
+triângulo, calcule e mostre a medida do terceiro ângulo; sabendo que a
+soma dos ângulos internos de um triângulo é 180. */
+void q3(){
+    double angulo1,angulo2,angulo3;
+    printf("Informe a medida dos 2 angulos separadamente:\n");
+    scanf("%lf %lf",&angulo1, &angulo2);
+    if (angulo1+angulo2 >180){
+       printf("Triangulo Inválido.");
+        return;
+    }
+    angulo3 = 180 - angulo1- angulo2;
+    printf("Medida do terceiro angulo:%.2lf",angulo3);
+}
 
 int main(){
-    q1();
+    q3();
     return 0;
 }
