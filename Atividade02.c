@@ -17,6 +17,21 @@ void q1(){
         divisor/=10;
     }while (5);
 }
+/** 2) Escreva um programa que calcula os quadrados e cubos dos inteiros
+de 0 a 10 e usa tabulações para imprimir as seguintes tabelas de
+valores */
+void q2(){
+    int quadrado, cubo , numero =0;
+    printf("%-10s %-10s %-10s\n", "Numero", "Quadrado", "Cubo");
+    do{
+        quadrado = round(pow(numero,2));
+        cubo = round(pow(numero,3));
+        
+        printf("%-10d %-10d %-10d\n",numero,quadrado,cubo);
+        numero++;
+    }while (numero<=10);
+}
+
 
 int main(){
     q1();
