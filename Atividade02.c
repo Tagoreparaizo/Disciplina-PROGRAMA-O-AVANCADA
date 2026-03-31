@@ -47,7 +47,22 @@ void q3(){
     printf("Medida do terceiro angulo:%.2lf",angulo3);
 }
 
+void q4(){
+    int numero;
+    printf("Informe um inteiro:\n");
+    scanf("%d",&numero);
+    if(numero%2==0){
+        printf("Numero %d e par",numero);
+    }else{
+        printf("Numero %d e impar",numero);
+    }
+
+}
+
 int main(){
+    q1();
+    q2();
     q3();
+    q4();
     return 0;
 }
