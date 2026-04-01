@@ -86,7 +86,26 @@ void q6(){
         printf("Número é positivo");
     }
 }
+/** 1) Escreva um programa que lê cinco inteiros e determina e imprime o
+maior e o menor inteiro no grupo */
+void q7(){
+    int n1,n2,n3,n4,n5,maior,menor;
+    printf("Informe os 5 inteiros separadamente:");
+    scanf("%d %d %d %d %d",&n1, &n2, &n3, &n4, &n5);
 
+    maior = menor = n1;
+
+    if (n2>maior) maior = n2;
+    else menor=n2;
+    if (n3>maior) maior = n3;
+    else if (n3<menor) menor = n3;
+    if (n4>maior) maior = n4;
+    else if (n4<menor) menor = n4;
+    if (n5>maior) maior = n5;
+    else if (n5<menor) menor =n5;
+    
+    printf("Maior inteiro:%d\nMenor Inteiro:%d",maior, menor);
+}
 int main(){
     q1();
     q2();
@@ -94,5 +113,6 @@ int main(){
     q4();
     q5();
     q6();
+    q7();
     return 0;
 }
