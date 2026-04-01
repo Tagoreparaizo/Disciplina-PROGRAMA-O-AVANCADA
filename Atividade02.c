@@ -120,8 +120,21 @@ void q8(){
     }else{
         printf("%lf está fora do intervalo de 10 a 20",numero);
     }
-
 }
+/** 4) Confeccionar um algoritmo para ler três valores e emitir se os
+mesmos podem ou não ser os comprimentos dos lados de um
+triângulo.*/
+void q9(){
+    double numero1, numero2, numero3;
+    printf("Informe os 3 lados:\n");
+    scanf("%lf %lf %lf", &numero1, &numero2, &numero3);
+    if((numero1<numero2+numero3)&&(numero2<numero1+numero3)&&(numero3<numero2+numero1)){
+        printf("Podem formar um triângulo!\n");
+        return;
+    }
+
+    printf("Não podem formar um triângulo\n");
+}   
 int main(){
     q1();
     q2();
@@ -131,5 +144,6 @@ int main(){
     q6();
     q7();
     q8();
+    q9();
     return 0;
 }
