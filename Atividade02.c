@@ -63,7 +63,7 @@ void q4(){
 primeiro é um múltiplo do segundo */
 void q5(){
     int numero1, numero2;
-    printf("Informe dois inteiros");
+    printf("Informe dois inteiros:\n");
     scanf("%d %d", &numero1, &numero2);
     if(numero1%numero2 ==0){
         printf("%d é multiplo de %d", numero1, numero2);
@@ -75,7 +75,7 @@ void q5(){
 negativo ou nulo. */
 void q6(){
     double numero;
-    printf("informe um número");
+    printf("informe um número:\n");
     scanf("%lf", &numero);
 
     if(numero<0){
@@ -106,6 +106,22 @@ void q7(){
     
     printf("Maior inteiro:%d\nMenor Inteiro:%d",maior, menor);
 }
+/** 3) Confeccionar um algoritmo para ler um número e emitir se o mesmo
+está compreendido no intervalo de 10 a 20 inclusive. */
+void q8(){
+    double numero;
+    printf("Insira um número:");
+    scanf("%lf",&numero);
+
+    if(10<=numero){
+        if(numero<=20){
+        printf("%lf está dentro do intervalo de 10 a 20",numero);
+        }else{printf("%lf está fora do intervalo de 10 a 20",numero);}
+    }else{
+        printf("%lf está fora do intervalo de 10 a 20",numero);
+    }
+
+}
 int main(){
     q1();
     q2();
@@ -114,5 +130,6 @@ int main(){
     q5();
     q6();
     q7();
+    q8();
     return 0;
 }
