@@ -46,7 +46,9 @@ void q3(){
     angulo3 = 180 - angulo1- angulo2;
     printf("Medida do terceiro angulo:%.2lf",angulo3);
 }
-
+/** 4) Escreva um programa que lê um inteiro e determina e imprime se ele é
+ímpar ou par.
+ */
 void q4(){
     int numero;
     printf("Informe um inteiro:\n");
@@ -56,7 +58,18 @@ void q4(){
     }else{
         printf("Numero %d e impar",numero);
     }
-
+}
+/** 3) Escreva um programa que lê dois inteiros e determina e imprime se o
+primeiro é um múltiplo do segundo */
+void q5(){
+    int numero1, numero2;
+    printf("Informe dois inteiros");
+    scanf("%d %d", &numero1, &numero2);
+    if(numero1%numero2 ==0){
+        printf("%d é multiplo de %d", numero1, numero2);
+    }else{
+        printf("%d não é multiplo de %d", numero1, numero2);
+    }
 }
 
 int main(){
@@ -64,5 +77,6 @@ int main(){
     q2();
     q3();
     q4();
+    q5();
     return 0;
 }
