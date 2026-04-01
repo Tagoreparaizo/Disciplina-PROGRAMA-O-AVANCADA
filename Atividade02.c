@@ -71,6 +71,21 @@ void q5(){
         printf("%d não é multiplo de %d", numero1, numero2);
     }
 }
+/**1) Criar um algoritmo para ler um número e emitir se o mesmo é positivo,
+negativo ou nulo. */
+void q6(){
+    double numero;
+    printf("informe um número");
+    scanf("%lf", &numero);
+
+    if(numero<0){
+        printf("Número é negativo");
+    }else if (numero == 0){
+        printf("Número é nulo");
+    }else if (numero>0){
+        printf("Número é positivo");
+    }
+}
 
 int main(){
     q1();
@@ -78,5 +93,6 @@ int main(){
     q3();
     q4();
     q5();
+    q6();
     return 0;
 }
