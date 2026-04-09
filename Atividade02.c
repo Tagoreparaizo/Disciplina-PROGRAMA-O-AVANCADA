@@ -140,13 +140,18 @@ triângulo.*/
 void q10(){
     double lado1, lado2, lado3;
     printf("Informe os 3 lados:\n");
-    scanf("%lf %lf %lf", &numero1, &numero2, &numero3);
-    if((numero1<numero2+numero3)&&(numero2<numero1+numero3)&&(numero3<numero2+numero1)){
+    scanf("%lf %lf %lf", &lado1, &lado2, &lado3);
+    if((lado1<lado2+lado3)&&(lado2<lado1+lado3)&&(lado3<lado2+lado1)){
         printf("Podem formar um triângulo!\n");
-        if ;
+        if (lado1==lado2 && lado2==lado3){printf("Triangulo Equilátero");}
+        else if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3){
+            printf("Triangulo Isoceles");
+        }else{
+            printf("Triangulo Escaleno");
+        }
     }
     else{printf("Não podem formar um triângulo\n");}
-}  
+}
 int main(){
     q1();
     q2();
@@ -157,5 +162,6 @@ int main(){
     q7();
     q8();
     q9();
+    q10();
     return 0;
 }
