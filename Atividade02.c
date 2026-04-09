@@ -152,6 +152,36 @@ void q10(){
     }
     else{printf("Não podem formar um triângulo\n");}
 }
+/** 6) Faça um programa que receba o preço de um produto, calcule e
+mostre , de acordo com as tabelas abaixo, o novo preço e a
+classificação.*/
+void q11(){
+    double preco;
+    printf("Informe o valor do produto:");
+    scanf("%lf",&preco);
+    if (preco<=50){
+        preco *= 1.05;
+    }
+    else if(preco<=100){
+        preco *= 1.1;
+    }
+    else{
+        preco *=1.15;
+    }
+    printf("Preco do produto:%.2lf\n",preco);
+    if (preco<80){
+        printf("Produto barato");
+    }
+    else if(preco<=120){
+        printf("Produto normal");
+    }
+    else if (preco<=200){
+        printf("Produto caro");
+    }
+    else{
+        printf("Produto muito caro");
+    }
+}
 int main(){
     q1();
     q2();
@@ -163,5 +193,6 @@ int main(){
     q8();
     q9();
     q10();
+    q11();
     return 0;
 }
