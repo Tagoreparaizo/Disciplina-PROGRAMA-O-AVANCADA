@@ -24,9 +24,18 @@ void q1(){
         default: printf("Valor indefinido, por favor apenas de 1 a 4"); break;
     }
 }
+/** 1) Imprima todos os números inteiros compreendidos entre 23 a 50 em
+ordem decrescente.
+50, 49, 48, .. 23*/
+void q2(){
+    for(int contador = 50; contador>=23; contador--)
+    printf("%d\n",contador);
+
+}
 int main()
 {
     q1();
+    q2(;)
 
     return 0;
 }
