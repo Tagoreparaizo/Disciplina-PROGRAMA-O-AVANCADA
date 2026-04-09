@@ -32,10 +32,17 @@ void q2(){
     printf("%d\n",contador);
 
 }
+/** 2) Imprima todos os números pares compreendidos entre 200 e 300.*/
+void q3(){
+    for(int contador = 200; contador<=300; contador+=2)
+    printf("%d\n",contador);
+
+}
 int main()
 {
     q1();
-    q2(;)
+    q2();
+    q3();
 
     return 0;
 }
