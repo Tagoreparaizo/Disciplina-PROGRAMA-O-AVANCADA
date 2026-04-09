@@ -125,16 +125,28 @@ void q8(){
 mesmos podem ou não ser os comprimentos dos lados de um
 triângulo.*/
 void q9(){
-    double numero1, numero2, numero3;
+    double lado1, lado2, lado3;
+    printf("Informe os 3 lados:\n");
+    scanf("%lf %lf %lf", &lado1, &lado2, &lado3);
+    if((lado1<lado2+lado3)&&(lado2<lado1+lado3)&&(lado3<lado2+lado1)){
+        printf("Podem formar um triângulo!\n");
+        return;
+    }
+    printf("Não podem formar um triângulo\n");
+}   
+/** 4) Confeccionar um algoritmo para ler três valores e emitir se os
+mesmos podem ou não ser os comprimentos dos lados de um
+triângulo.*/
+void q10(){
+    double lado1, lado2, lado3;
     printf("Informe os 3 lados:\n");
     scanf("%lf %lf %lf", &numero1, &numero2, &numero3);
     if((numero1<numero2+numero3)&&(numero2<numero1+numero3)&&(numero3<numero2+numero1)){
         printf("Podem formar um triângulo!\n");
-        return;
+        if ;
     }
-
-    printf("Não podem formar um triângulo\n");
-}   
+    else{printf("Não podem formar um triângulo\n");}
+}  
 int main(){
     q1();
     q2();
