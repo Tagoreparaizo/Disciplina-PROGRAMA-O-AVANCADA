@@ -94,6 +94,25 @@ void q6(){
     }
     printf("Soma dos multiplos de 3:%d",soma);
 }
+/** 1) Dados n e n sequências de números inteiros não-nulos, calcular a
+soma dos números pares de cada sequência..*/
+void q7(){
+    int n, soma=0, numero;
+    printf("Informe um número N:\n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        numero =1;
+        soma=0;
+        while(numero!=0){
+            printf("Informe um número:\n");
+            scanf("%d",&numero);
+            if (numero%2 ==0)
+                soma+=numero;
+        }
+        printf("Soma dos pares:%d\n",soma);
+        
+    }
+}
 int main()
 {
     q1();
@@ -102,6 +121,6 @@ int main()
     q4();
     q5();
     q6();
-
+    q7();
     return 0;
 }
