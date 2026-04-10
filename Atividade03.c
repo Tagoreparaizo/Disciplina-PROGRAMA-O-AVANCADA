@@ -63,12 +63,33 @@ void q4(){
     printf("Maior média da turma:%.1lf\n",maiorMedia);
     printf("Média maior que 6:%d",aprovados);
 }
+/** 1) Calcule a exiba a soma dos números primos entre 200 a 300. Lembre
+de escrever na tela cada um desses números.*/
+void q5(){
+    int stop,soma=0;
+    for (int i=200;i<=300;i++){
+        stop=1;
+        for (int j=2;j<=i/2;j++){
+            if (i%j==0){
+                stop=0;
+                break;
+            }
+        }
+        if (stop==1) {
+            soma +=i;
+            printf("%i\n",i);
+        }
+        
+    }
+    printf("Soma total: %i",soma);
+}
 int main()
 {
     q1();
     q2();
     q3();
     q4();
+    q5();
 
     return 0;
 }
