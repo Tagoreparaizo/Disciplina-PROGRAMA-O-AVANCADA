@@ -38,11 +38,37 @@ void q3(){
     printf("%d\n",contador);
 
 }
+/** 3) Crie um algoritmo para ler 3 notas de cada aluno de uma turma de 5
+alunos e escreva a média de cada aluno. Escreva também o nome do aluno,
+a média mais alta dessa turma e quantos alunos obtiveram média maior do
+que 6.*/
+void q4(){
+    char nome[50];
+    double nota, soma , maiorMedia = 0, media;
+    int aprovados=0;
+    for (int i =0;i<5;i++){
+        soma =0;
+        printf("Informe o nome do aluno:\n");
+        scanf("%s",nome);
+        for (int j =1;j<=3;j++){
+            printf("Informe a %d° nota:\n",j);
+            scanf("%lf",&nota);
+            soma +=nota;
+        }
+        media = soma/3.0;
+        printf("Média do aluno %s :%.1lf\n",nome,media);
+        if (media>maiorMedia) maiorMedia=media;
+        if (media>6.0) aprovados++;
+    }
+    printf("Maior média da turma:%.1lf\n",maiorMedia);
+    printf("Média maior que 6:%d",aprovados);
+}
 int main()
 {
     q1();
     q2();
     q3();
+    q4();
 
     return 0;
 }
