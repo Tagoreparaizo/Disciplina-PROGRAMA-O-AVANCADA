@@ -83,6 +83,17 @@ void q5(){
     }
     printf("Soma total: %i",soma);
 }
+/** 2) Escrever programa para ler 150 números (dados pelo usuário) e exibir
+a soma dos múltiplos de 3 lidos (entre os 150 números supracitados).*/
+void q6(){
+    int numero, soma=0;
+    for (int i =1;i<=150;i++){
+        printf("Informe o %d° número:\n",i);
+        scanf("%d",&numero);
+        if(numero%3 ==0) soma+= numero;
+    }
+    printf("Soma dos multiplos de 3:%d",soma);
+}
 int main()
 {
     q1();
@@ -90,6 +101,7 @@ int main()
     q3();
     q4();
     q5();
+    q6();
 
     return 0;
 }
