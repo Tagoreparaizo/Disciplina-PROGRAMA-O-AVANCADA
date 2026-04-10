@@ -113,6 +113,27 @@ void q7(){
         
     }
 }
+/** 2) Quais das somas das sequências acima é a MAIOR?*/
+void q8(){
+    int n, soma=0, numero,maior =0;
+    printf("Informe um número N:\n");
+    scanf("%d",&n);
+    for(int i=1;i<=n;i++){
+        numero =1;
+        soma=0;
+        while(numero!=0){
+            printf("Informe um número:\n");
+            scanf("%d",&numero);
+            if (numero%2 ==0)
+                soma+=numero;
+        }
+        printf("Soma dos pares:%d\n",soma);
+        if (soma>maior)
+            maior = soma;
+        
+    }
+    printf("Maior soma:%d",maior);
+}
 int main()
 {
     q1();
@@ -122,5 +143,6 @@ int main()
     q5();
     q6();
     q7();
+    q8();
     return 0;
 }
