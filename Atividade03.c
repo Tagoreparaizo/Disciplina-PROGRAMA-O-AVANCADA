@@ -134,6 +134,18 @@ void q8(){
     }
     printf("Maior soma:%d",maior);
 }
+/** 3) Faça um programa para calcular o fatorial de um número. Proponha
+uma solução de contorno para o caso números grandes.*/
+void q9(){
+    int n;
+    unsigned long long resultado;
+    printf("Informe um número N:\n");
+    scanf("%d",&n);
+    resultado = n;
+    for (int i=1;i<n;i++)
+        resultado *=i;
+    printf("Fatorial de %d é:%d",n,resultado);
+}
 int main()
 {
     q1();
@@ -144,5 +156,6 @@ int main()
     q6();
     q7();
     q8();
+    q9();
     return 0;
 }
