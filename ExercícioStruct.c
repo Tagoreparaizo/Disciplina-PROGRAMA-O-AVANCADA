@@ -66,3 +66,84 @@ int main()
 
     return 0;
 }
+/*2) Crie um sistema de gerenciamento de estoque para uma loja.
+Cada produto deve conter:
+
+código (int)
+nome (string até 40 chars)
+preço (float)
+quantidade em estoque (int)
+
+O programa deve:
+1.Permitir cadastrar até 100 produtos.
+2.Exibir todos os produtos cadastrados.
+3.Permitir buscar um produto pelo código e atualizar sua quantidade.
+4.Exibir o valor total do estoque (somatório de preço × quantidade).**/
+
+#include <stdlib.h>
+#include <stdio.h>
+
+typedef struct {
+  int codigo;
+  char nome[40];
+  float preco;
+  int estoque;
+}produto;
+
+void cadastrarProduto(produto loja[],int i){
+  printf("Informe nome do produto:\n");
+  setbuf(stdin, NULL);
+  fgets(loja[i].nome,40,stdin);
+  printf("Informe o código do produto:\n");
+  scanf("%d",&loja[i].codigo);
+  printf("Informe o preço do produto:\n");
+  scanf("%f",&loja[i].preco);
+  printf("Informe o código do produto:\n");
+  scanf("%d",&loja[i].estoque);
+}
+void printarProduto(produto loja[],int i){
+  printf("Código: %d\n", loja[i].codigo);
+  printf("Nome: %s\n", loja[i].nome);
+  printf("Preço: %.2f\n", loja[i].preco);
+  printf("Estoque: %d\n", loja[i].estoque);
+}
+
+void atualizarProduto(produto loja[], int totalCadastrados){
+  int codigo;
+  printf("Informe código do produto:\n");
+  scanf("%d",&codigo);
+  for (int j =0; j<totalCadastrados;j++){
+    if (loja[j].codigo == codigo){
+      printarProduto(loja,j);
+      printf("Informe a nova quantidade em estoque:");
+      scanf("%d",&loja[j].estoque);
+      break;
+    }
+  }
+}
+
+int main()
+{
+  produto loja[100];
+  int entrada = 1;
+  int i =0;
+  float totalLoja = 0;
+  while (entrada != 0 && i < 100){
+    printf("Digite 1 para cadastrar produto, 2 para buscar produto 0 para parar:\n");
+    scanf("%d",&entrada);
+    if (entrada ==1){
+      cadastrarProduto(loja,i);
+      i++;
+    }
+    else if (entrada ==2){
+      atualizarProduto(loja,i);
+    }
+  }
+  for (int j =0; j<i;j++ ){
+      float totalProduto = loja[j].preco*loja[j].estoque;
+      totalLoja += totalProduto;
+      printarProduto(loja,j);
+    }
+  printf("Valor total do estoque: %.2f",totalLoja);
+  return 0;
+}
